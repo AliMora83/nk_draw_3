@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-type Props = {}
 
-function Header({}: Props) {
+function Header() {
   return (
     <div className=''>
         <div>
