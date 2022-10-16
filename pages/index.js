@@ -38,6 +38,44 @@ export default function Home() {
 
       <Header />
 
+      <div
+        className="space-y-5 md:space-y-0 m-5 md:flex md:flex-row items-start 
+        justify-center md:space-x-5"
+      >
+        <div
+          className="stats-container bg-gradient-to-t from-[#080A0B] to-[#2C2B2B] 
+        outline outline-offset-2 outline-1 outline-[#fedfa1] "
+        >
+          <h3 className="text-center font-light text-[#caa969] animate-pulse">
+            Current Draw Info
+          </h3>
+          <div className="flex justify-between p-2 space-x-2">
+            <div className="stats">
+              <p className="text-[#caa969]">
+                Total Pool
+              </p>
+              <h3
+                className="uppercase text-[#fff] md:text-lg font-semibold
+                          text-lg font-mont tracking-tight"
+              >
+                0.06 Matic
+              </h3>
+            </div>
+            <div className="stats">
+              <p className="text-[#caa969]">
+                Tickets Left
+              </p>
+              <h3
+                className="uppercase text-[#fff] md:text-lg font-semibold
+                          text-lg font-mont tracking-tight"
+              >
+                10
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h1 className="text-center justify-center items-center my-10 text-white">
         Building NAMKA Crypto Draw V 2.0
       </h1>
