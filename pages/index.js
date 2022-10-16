@@ -13,6 +13,10 @@ import Loading from "../components/Loading";
 
 export default function Home() {
   const address = useAddress();
+  const { contract, isLoading } = useContract(
+    process.env
+      .NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
+  );
 
   if (isLoading) return <Loading />;
   if (!address) return <Login />;
