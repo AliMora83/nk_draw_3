@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
+
       <h1> Building NAMKA Crypto Draw V 2.0</h1>
       <footer className={styles.footer}>
         <p>Developed by Ali Mora</p>
