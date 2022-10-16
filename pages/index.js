@@ -24,7 +24,7 @@ export default function Home() {
     scrollbar-thin scrollbar-track-[#000] scrollbar-thumb-[#e0aa53] scroll-smooth"
     >
       <Head>
-        <title>NAMKA Crypto Draw</title>
+        <title>NAMKA Crypto Draw X</title>
         <meta
           name="description"
           content="Web3 Crypto Draw by Ali Mora"
