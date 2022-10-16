@@ -5,7 +5,7 @@ import NavButton from './NavButton'
 
 function Header() {
   return (
-    <div className='grid grid-cols-2 md:grid-cols-5 m-5 mx-10'>
+    <header className='grid grid-cols-2 md:grid-cols-5 m-5 mx-10'>
         <div className='flex space-x-2 items-center'>
             <img 
             className='h-20 w-20 rounded-full'
@@ -34,7 +34,7 @@ function Header() {
               </svg>
             </button></a> 
              </nav>
-    </div>
+    </header>
   )
 }
 

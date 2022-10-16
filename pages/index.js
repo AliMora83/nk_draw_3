@@ -21,7 +21,7 @@ export default function Home() {
 
       <Header />
 
-      <h1 className="text-center justify-center items-center my-10">
+      <h1 className="text-center justify-center items-center my-10 text-white">
         Building NAMKA Crypto Draw V 2.0
       </h1>
       <footer className="flex flex-col items-center text-white justify-between pb-5">
