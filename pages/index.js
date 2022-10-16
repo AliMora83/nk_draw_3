@@ -10,6 +10,8 @@ import {
 } from "@thirdweb-dev/react";
 import Login from "../components/Login";
 import Loading from "../components/Loading";
+import CountdownTimer from "../components/CountdownTimer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const address = useAddress();
@@ -17,6 +19,8 @@ export default function Home() {
     process.env
       .NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
   );
+
+  const [quantity, setQuantity] = useState(1);
 
   if (isLoading) return <Loading />;
   if (!address) return <Login />;
@@ -71,6 +75,59 @@ export default function Home() {
               >
                 10
               </h3>
+            </div>
+          </div>
+          <div className="mt-10">
+            <CountdownTimer />
+          </div>
+        </div>
+        <div className="stats-container space-y-2 bg-[#080A0B]">
+          <div className="stats-container bg-gradient-to-t from-[#080A0B] to-[#2C2B2B] ">
+            <div className="flex justify-between items-center text-white pb-2">
+              <h2 className="countdown-label text-gray-500">
+                Price per ticket
+              </h2>
+              <p
+                className="uppercase text-gray-500 md:text-base font-semibold
+                          text-sm font-mont tracking-tight"
+              >
+                0.001 Matic
+              </p>
+            </div>
+            <div className="flex text-white items-center space-x-2 bg-[#080A0B] p-5 rounded-lg border-[#caa969] border-2">
+              <p>TICKETS</p>
+              <input
+                className="flex w-full bg-transparent text-right outline-none"
+                type="number"
+                min={1}
+                max={10}
+                value={quantity}
+                onChange={(e) =>
+                  setQuantity(
+                    Number(e.target.value)
+                  )
+                }
+              />
+            </div>
+            <div className="space-y-2 mt-5">
+              <div className="flex items-center justify-between font-extrabold text-sm text-[#2b80d0]">
+                <p className="countdown-label text-gray-500">
+                  Total cost of tickets
+                </p>
+                <p>0.01 Matic</p>
+              </div>
+              <div className="flex items-center justify-between text-xs italic text-[#2b80d0]">
+                <p className="countdown-label text-gray-500">
+                  Service Fees
+                </p>
+                <p className="countdown-label text-gray-500">
+                  0.01 Matic
+                </p>
+              </div>
+              <p className="text-xs">
+                These fees are deducted from the
+                winning amount
+              </p>
             </div>
           </div>
         </div>
