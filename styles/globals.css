@@ -1,26 +1,106 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+
+
+    .stats {
+        @apply bg-[#080a0b] text-[#caa969] p-4 flex-1 rounded-md text-sm font-mont
+    }
+
+    .stats-container {
+        @apply bg-[#2c2b2b] p-5 rounded-lg font-mont
+    }
+
+    .countdown {
+        @apply p-8 text-5xl text-center text-white rounded-lg lg:min-w-[150px] bg-[#080a0b] 
+        font-mont border-[#caa969] border-b-2
+    }
+
+    .countdown-label {
+        @apply text-center text-[#caa969] uppercase text-xs mt-2 font-mont
+    }
+
+    .admin-button {
+        @apply bg-[#080a0b] p-2 flex-1 font-mont rounded-md hover:bg-[#2c2b2b] uppercase text-[#caa969] text-sm
+        hover:scale-110 ease-in-out duration-300
+    }
+
+    .admin-icon {
+        @apply mx-auto mb-2 mt-4 h-5
+    }
+
+    .nav-button {
+        @apply  inline-flex items-center bg-gradient-to-tr from-[#caa969] to-[#5b471e] hover:from-[#5b471e] hover:to-[#caa969]
+        py-1 px-3 rounded text-base mt-4 md:mt-0 hover:scale-110 ease-in-out duration-300
+    }
+
+    .heroButton {
+        @apply px-4 py-2 border border-[#2c2b2b] rounded-full uppercase text-xs
+        tracking-widest text-[#e0aa53] transition-all hover:border-[#caa969]
+        hover:text-gray-100 font-mont hover:scale-75
+    }
+
+    .buy-button {
+       @apply mt-5 w-full bg-gradient-to-br from-[#caa969] via-[#855d0c] to-[#513a0d]
+              px-8 py-5 rounded-md text-sm text-white shadow-lg font-semibold hover:scale-110 ease-in-out duration-300
+             disabled:from-gray-400 disabled:text-gray-100 disabled:to-gray-600 
+             disabled:cursor-not-allowed uppercase tracking-wide
+    }
+
+    .social-icons {
+        @apply hover:scale-150 ease-in-out duration-300
+    }
+
+    h2 {
+        @apply uppercase tracking-wider
+    }
+
+    h3 {
+        @apply uppercase md:tracking-[5px] text-[#fff] md:text-xl font-semibold
+        text-lg tracking-wide font-mont
+    }
+
+    h4 {
+        @apply uppercase md:tracking-wide text-[#caa969] text-sm font-mont font-medium
+    }
+
+    p {
+        @apply text-gray-400 text-sm
+    }
+
+    /* .cursor {
+        background-color: #caa969;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 10;
+      } */
+
+      .player-wrapper {
+        @apply relative pt-12
+      }
+
+      .react-player {
+        @apply absolute top-0 left-0
+      }
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+/* Colors 
+
+#caa969, #fedfa1, #2c2b2b, #080a0b, #ffbb22, #ff8d1b, #e0aa53
+
+# */
+
+
