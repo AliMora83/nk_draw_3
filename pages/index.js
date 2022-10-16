@@ -2,8 +2,21 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
+import {
+  useContract,
+  useContractWrite,
+  useAddress,
+  useContractRead,
+} from "@thirdweb-dev/react";
+import Login from "../components/Login";
+import Loading from "../components/Loading";
 
 export default function Home() {
+  const address = useAddress();
+
+  if (isLoading) return <Loading />;
+  if (!address) return <Login />;
+
   return (
     <div
       className="bg-gradient-to-r from-[#080A0B] via-[#2C2B2B] to-[#080A0B] min-h-screen flex flex-col
